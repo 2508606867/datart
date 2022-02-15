@@ -25,6 +25,12 @@ public class AccessLogAdvice {
         log(AccessType.READ, id, signature.getReturnType());
     }
 
+    @Before(value = "execution(* datart.core.mappers..*.selectByPrimaryKey(java.lang.String)) && args(id)")
+    public void selectByPrimaryKey1(JoinPoint jp, String id) {
+        MethodSignature signature = (MethodSignature) jp.getSignature();
+        log(AccessType.READ, id, signature.getReturnType());
+    }
+
     @Before(value = "execution(* datart.core.mappers..*.deleteByPrimaryKey(java.lang.String)) && args(id)")
     public void deleteByPrimaryKey(JoinPoint jp, String id) {
         MethodSignature signature = (MethodSignature) jp.getSignature();

@@ -38,6 +38,9 @@ public class BaseController extends MessageResolver {
     protected User getCurrentUser() {
         return securityManager.getCurrentUser();
     }
+    protected User getCurrentUser1() {
+        return securityManager.getCurrentUser();
+    }
 
     public void checkBlank(String param, String paramName) {
         if (StringUtils.isBlank(param)) {
