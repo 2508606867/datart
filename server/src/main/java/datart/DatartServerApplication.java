@@ -10,40 +10,8 @@ public class DatartServerApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(DatartServerApplication.class, args);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+        System.out.println(123);
+        }
 
 //    @Bean
 //    public ServletRegistrationBean<StatViewServlet> druidStatViewServlet() {
